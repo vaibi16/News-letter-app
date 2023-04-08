@@ -31,10 +31,11 @@ const data={
 
 const jsondata=JSON.stringify(data);
 const url="https://us11.api.mailchimp.com/3.0/lists/2c6c0c9223";
+const apikey=process.env.API_KEY;
 
 const options={
     method:"POST",
-    auth:"vaibhav:f4117d89b7a2e03082c34a22a0b634bd-us11"
+    auth:"vaibhav:${apikey}"
 }
 const request=https.request(url,options,function(response){
 
