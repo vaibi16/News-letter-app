@@ -5,7 +5,7 @@ const https=require("https");
  
 const app=express();
 app.use(bodyparser.urlencoded({extended:true}));
-app.use(express.static("build"));
+app.use(express.static("public"));
 
 
 app.get("/", function(req,res){
